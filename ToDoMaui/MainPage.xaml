@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Shell.NavBarIsVisible="false"
+             x:Class="ToDoMaui.MainPage">
+
+    <ScrollView BackgroundColor="#3D7880">
+        <VerticalStackLayout 
+            Spacing="25"
+            Padding="20,10">
+            <Grid RowDefinitions="auto,*,*,auto" RowSpacing="20">
+                <Grid 
+                    Grid.Row="0" 
+                    VerticalOptions="Start" 
+                    ColumnSpacing="5"
+                    ColumnDefinitions="50,*,50,50">
+                    <Button 
+                        Grid.Column="0" 
+                        FontFamily="Icons"
+                        FontSize="Medium"
+                        Text="&#xe808;" 
+                        TextColor="#FFF"
+                        VerticalOptions="Center"
+                        BackgroundColor="Transparent"
+                        HorizontalOptions="Start"
+                        Clicked="MenuClicked"/>
+                    <Label 
+                        Grid.Column="1" 
+                        FontSize="Medium"
+                        Text="Lists" 
+                        TextColor="#FFF"
+                        VerticalOptions="Center"/>
+                    <Button 
+                        Grid.Column="2" 
+                        FontFamily="Icons"
+                        FontSize="Medium"
+                        Text="&#xe811;" 
+                        TextColor="#FFF" 
+                        BackgroundColor="Transparent"
+                        VerticalOptions="Center" />
+                    <Button 
+                        Grid.Column="3" 
+                        Text="..." 
+                        TextColor="#FFF"
+                        FontSize="Medium"
+                        BackgroundColor="Transparent"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"/>
+                </Grid>
+
+                <StackLayout Grid.Row="1" Spacing="5">
+                    <Label FontSize="Title" Text="My Day" TextColor="#FFF"/>
+                    <Label FontSize="Medium" Text="Wednesday, 13. March" TextColor="#FFF"/>
+                </StackLayout>
+
+                <Grid 
+                    Grid.Row="2" 
+                    RowSpacing="5"
+                    RowDefinitions="*,*,*,*">
+
+                    <Frame Grid.Row="0" Padding="15,10">
+                        <Grid ColumnSpacing="15" ColumnDefinitions="20,*,20">
+                            <Label 
+                                Grid.Column="0" 
+                                VerticalOptions="Center" 
+                                FontFamily="Icons" 
+                                FontSize="Medium"
+                                Text="&#xE803;"
+                                TextColor="#3D7880" />
+                            <StackLayout Grid.Column="1" VerticalOptions="Center" >
+                                <Label Grid.Column="1" Text="Send report to Frank" TextColor="#888" TextDecorations="Strikethrough"/>
+                                <Label Grid.Column="1" Text="Fourth Coffee" TextColor="#666"/>
+                            </StackLayout>
+                            <Label 
+                                Grid.Column="2"
+                                FontFamily="Icons"
+                                FontSize="Medium"
+                                Text="&#xE812;" 
+                                VerticalOptions="Center" />
+                        </Grid>
+                    </Frame>
+
+                    <Frame Grid.Row="1"  Padding="15,10">
+                        <Grid ColumnSpacing="15" ColumnDefinitions="20,*,20">
+                            <Label 
+                                Grid.Column="0" 
+                                VerticalOptions="Center" 
+                                FontFamily="Icons"
+                                Text="&#xF10c;"
+                                FontSize="Medium"
+                                TextColor="#3D7880" />
+                            <StackLayout Grid.Column="1" VerticalOptions="Center" >
+                                <Label Grid.Column="1" Text="Review subcriptions"/>
+                                <Label Grid.Column="1" Text="Home" TextColor="#666"/>
+                            </StackLayout>
+                            <Label 
+                                Grid.Column="2"
+                                FontFamily="Icons"
+                                FontSize="Medium"
+                                Text="&#xE812;"
+                                VerticalOptions="Center" />
+                        </Grid>
+                    </Frame>
+
+                    <Frame Grid.Row="2"  Padding="15,10">
+                        <Grid ColumnSpacing="15" ColumnDefinitions="20,*,20">
+                            <Label 
+                                Grid.Column="0" 
+                                VerticalOptions="Center" 
+                                FontFamily="Icons"
+                                FontSize="Medium"
+                                Text="&#xF10C;" 
+                                TextColor="#3D7880" />
+                            <StackLayout Grid.Column="1" VerticalOptions="Center" >
+                                <Label Grid.Column="1" Text="Milk"/>
+                                <Label Grid.Column="1" Text="Groceries" TextColor="#666"/>
+                            </StackLayout>
+                            <Label 
+                                Grid.Column="2" 
+                                FontFamily="Icons"
+                                FontSize="Medium"
+                                Text="&#xE812;"
+                                VerticalOptions="Center" />
+                        </Grid>
+                    </Frame>
+                </Grid>     
+
+                <Grid
+                    Grid.Row="4" 
+                    ColumnDefinitions="20, *" 
+                    BackgroundColor="#333"
+                    ColumnSpacing="15"
+                    Padding="15">
+                        <Label 
+                            Grid.Column="0" 
+                            HorizontalTextAlignment="Center" 
+                            VerticalOptions="Center" 
+                            FontFamily="Icons" 
+                            Text="&#xe80F;"
+                            FontSize="Large"
+                            TextColor="#FFF" />
+
+                    <Label
+                        Grid.Column="1"
+                        FontSize="Small"
+                        TextColor="#FFF"
+                        VerticalTextAlignment="Center"
+                        Text="Add Task"/>
+
+                </Grid>          
+            </Grid>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
+

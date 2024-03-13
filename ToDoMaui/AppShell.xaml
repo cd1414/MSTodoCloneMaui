@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="ToDoMaui.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    xmlns:local="clr-namespace:ToDoMaui"
+    Shell.FlyoutBehavior="Flyout" BackgroundColor="Red">
+
+    <Shell.FlyoutHeader>
+        <Grid 
+            ColumnDefinitions="20,*, 50"
+            ColumnSpacing="20"
+            Padding="20,15">
+            <toolkit:AvatarView
+                Grid.Column="0"
+                ImageSource="dotnet_bot.png"/>
+            <Label
+                Grid.Column="1" 
+                VerticalTextAlignment="Center"
+                Text="John Doe"/>
+
+            <Button
+                Grid.Column="2"
+                FontFamily="Icons"
+                FontSize="Large"
+                BackgroundColor="Transparent"
+                TextColor="#000"
+                Text="&#xe80D;"/>
+        </Grid>
+    </Shell.FlyoutHeader>
+
+    
+    <ShellContent
+        Title="My Day"
+        ContentTemplate="{DataTemplate local:MainPage}">
+            <ShellContent.Icon>
+                <FontImageSource
+                        FontFamily="Icons"
+                        Glyph="&#xe811;"
+                        Color="Black"
+                        Size="18"/>
+            </ShellContent.Icon>
+    </ShellContent>
+
+    <ShellContent
+        Title="Important"
+        ContentTemplate="{DataTemplate local:MainPage}">
+            <ShellContent.Icon>
+                <FontImageSource
+                        FontFamily="Icons"
+                        Glyph="&#xe812;"
+                        Color="Black"
+                        Size="18"/>
+            </ShellContent.Icon>
+    </ShellContent>
+    
+</Shell>
+
